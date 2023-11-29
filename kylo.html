@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="bg-violet-100">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between ">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-violet-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMobileMenu()">
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
+              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden" -->
+              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <a href="index.html" class="text-gray-800 hover:bg-violet-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Home</a>
+              <a href="kylo.html" class="bg-violet-400 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Kylo</a>
+              <a href="caesar.html" class="text-gray-800 hover:bg-violet-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Caesar</a>
+              <a href="koba.html" class="text-gray-800 hover:bg-violet-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Koba</a>
+              <a href="contact.html" class="text-gray-800 hover:bg-violet-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Contact</a>
+            </div>
+        </nav>
+         
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <a href="index.html" class="text-gray-300 hover:bg-violet-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Home</a>
+          <a href="kylo.html" class="bg-violet-400 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Kylo</a>
+          <a href="caesar.html" class="text-gray-300 hover:bg-violet-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Caesar</a>
+          <a href="koba.html" class="text-gray-300 hover:bg-violet-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Koba</a>
+          <a href="contact.html" class="text-gray-300 hover:bg-violet-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
+        </div>
+      </div>
+
+      <div class="flex flex-col h-auto justify-between bg-gradient-to-r from-white from-0% via-violet-300 via-50% to-white to-100%">
+        
+        <div class="bg-gray-200  px-2.5 md:px-5 w-full md:w-2/3 m-0 md:m-auto mt-10 rounded-md shadow-lg flex self-center">
+            <main class="mb-auto">
+               <h2 class="text-gray-800 text-5xl p-10 flex justify-center">Kylo</h2>
+        
+           <h2 class="bg-violet-200 rounded-md flex justify-center p-1.5 text-2xl text-white text-gray-700 ">Meet Kylo!</h2>
+
+           <div class="flex items-center md:justify-between p-5 flex flex-col md:flex-row ">
+            <div class="md:w-2/3 md:h-auto w-60 h-auto">
+           <img src="kylo2.jpg" alt="Kylo the dog" class="rounded-md"> 
+           </div>
+           <div class="m-10 bg-violet-200 shadow-lg rounded-md pt-10 pb-10">
+            <p class="m-auto text-l p-2 text-center w-auto text-gray-700 ">Kylo is a 3 year old Boxer dog. He was named after the Star Wars character 'Kylo Ren'. His nicknames are:</p>
+            <ul class="p-2 flex flex-col items-center text-gray-700 ">
+                <li>Ky</li>
+                <li>Stinky Bum</li>
+                <li>Pooper</li>
+                <li>Ky Dog</li>
+            </ul>
+<p class="m-auto text-l p-2 text-center text-gray-700 ">When he was a puppy, he would chew anything he could. He would also bury things in the garden such as TV remotes!</p>
+            </div>
+           
+
+           </div>
+           <div class="flex items-center md:justify-between p-5 flex flex-col-reverse md:flex-row">
+            <div class="m-10 bg-violet-200 shadow-lg rounded-md flex justify-center items-center md:pt-20 md:pb-20 ">
+                <p class="m-auto text-l p-2 text-center text-gray-700 ">His favourite things are chicken, car rides, walkies, fetch, sunny weather and barking at strangers. </p>
+                
+                </div>
+            <div class="md:w-1/2 md:h-auto w-60 h-auto">
+           <img src="kylo1.jpg" alt="Kylo in car" class="rounded-md md:m-5"> 
+           </div>
+           
+           </div>
+
+           <div class="flex items-center md:justify-between p-5 flex flex-col md:flex-row">
+            <div class="md:w-2/3  md:min-w-auto md:min-h-46 md:h-auto w-60 h-auto">
+                <img src="kylo.jpg" alt="Kylo peeping under fence" class="rounded-md md:m-5"> 
+                </div>
+            <div class="m-10 bg-violet-200 shadow-lg rounded-md flex justify-center items-center md:pt-20 md:pb-20 ">
+                <p class="m-auto text-l p-2 text-center text-gray-700 ">His least favourite things are the postman, unknown items in the house, lemons, being told "no" and birds in the garden. </p>
+                </div>
+             </div>
+
+             <div class="m-10 bg-violet-200 shadow-lg rounded-md">
+                <p class="m-auto text-s p-20 text-center text-gray-700 ">If you want to see more of Kylo, he has his own Instagram account. <a href="https://www.instagram.com/kylo_theboxer/" class="text-white hover:text-gray-500">Click here to take a look.</a></p>
+             </div>
+        </div>
+        </div>
+        
+       
+    
+    </main>
+    <footer class="bg-violet-100"> 
+        <p class="p-1 text-l text-gray-600 p-5">&copy; Sophie Woodcock, 2023</p>
+
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+          var mobileMenu = document.getElementById('mobile-menu');
+          mobileMenu.classList.toggle('hidden');
+        }
+      </script>
+
+    </body>
+    </html>
+    

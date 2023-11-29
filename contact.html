@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="bg-violet-100">
+      <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="relative flex h-16 items-center justify-between ">
+          <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <!-- Mobile menu button-->
+            <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-violet-300 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false" onclick="toggleMobileMenu()">
+              <span class="absolute -inset-0.5"></span>
+              <span class="sr-only">Open main menu</span>
+              <!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" -->
+              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!-- Icon when menu is open. Menu open: "block", Menu closed: "hidden" -->
+              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <a href="index.html" class="text-gray-800 hover:bg-violet-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
+              <a href="kylo.html" class="text-gray-800 hover:bg-violet-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Kylo</a>
+              <a href="caesar.html" class="text-gray-800 hover:bg-violet-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Caesar</a>
+              <a href="koba.html" class="text-gray-800 hover:bg-violet-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Koba</a>
+              <a href="contact.html" class="bg-violet-400 text-white rounded-md px-3 py-2 text-sm font-mediummm">Contact</a>
+            </div>
+        </nav>
+         
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="sm:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2">
+          <a href="index.html" class="text-gray-300 hover:bg-violet-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Home</a>
+          <a href="kylo.html" class="text-gray-300 hover:bg-violet-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Kylo</a>
+          <a href="caesar.html" class="text-gray-300 hover:bg-violet-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Caesar</a>
+          <a href="koba.html" class="text-gray-300 hover:bg-violet-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Koba</a>
+          <!--Maybe change name of day-to-day its not great-->
+          <a href="contact.html" class="bg-violet-400 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Contact</a>
+        </div>
+      </div>
+      <div class="flex flex-col h-screen justify-between bg-gradient-to-r from-white from-0% via-violet-300 via-50% to-white to-100%">
+        
+        <div class="bg-gray-200 px-5 w-2/3 m-auto rounded-md shadow-lg">
+        <main class="mb-auto">
+           <h2 class="text-gray-800 text-5xl p-10 flex justify-center">Contact</h2>
+            <p class="text-gray-800 text-lg p-10">Tell me about your pets...</p>
+
+        <form>
+            <div class="flex items-center flex-col text-lg">
+                <label for="text" class="block">Your Name</label>
+                <input type="text" placeholder="Your name..." class="rounded-md shadow-s w-15 p-1.5 m-5">
+                
+                
+                <p class="p-1.5">How many pets do you have?</p>
+                <div class="flex flex-row m-5">
+                <label m-2>
+                <input type="radio" name="number-of-pets" value="1" class="m-1.5" checked>1
+                
+                
+                
+                    <input type="radio" name="number-of-pets" value="2" class="m-1.5">2
+                    
+                    
+                        <input type="radio" name="number-of-pets" value="3" class="m-1.5">3
+                        
+                        
+                            <input type="radio" name="number-of-pets" value="4-or-more" class="m-1.5">4 or more
+                            </label>
+                            </div>
+
+                            
+                </div>
+                <div class="flex items-center flex-col text-lg">
+                   
+                <p class="p-1.5">What animals do you have?</p>
+                    <div class="flex flex-row m-5">
+                    <label m-2>
+                    <input type="checkbox" name="animal-type" value="cat" class="m-1.5">Cat
+                    
+                    
+                    <input type="checkbox" name="animal-type" value="dog" class="m-1.5">Dog
+                        
+                    <input type="checkbox" name="animal-type" value="rabbit" class="m-1.5">Rabbit
+                            
+                    <input type="checkbox" name="animal-type" value="guinea-pig" class="m-1.5">Guinea Pig
+                                
+                    <input type="checkbox" name="animal-type" value="other" class="m-1.5">Other
+                </label>
+                    </div>
+                    <input type="submit" value="Submit" class="p-1.5 bg-violet-400 rounded-md m-10 hover:bg-violet-300 hover:text-white hover:cursor-pointer">
+
+
+    
+                                
+                    </div>
+                </form>
+             </main>
+        </div>
+        
+    </div>
+    <footer class="bg-violet-100"> 
+        <p class="p-1 text-l text-gray-600 p-5">&copy; Sophie Woodcock, 2023</p>
+
+    </footer>
+    
+    <script>
+        function toggleMobileMenu() {
+          var mobileMenu = document.getElementById('mobile-menu');
+          mobileMenu.classList.toggle('hidden');
+        }
+      </script>
+    </body>
+    </html>
+    
