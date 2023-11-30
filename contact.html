@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Tell me about your pets</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
@@ -26,7 +27,7 @@
               </svg>
             </button>
         </div>
-        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start md:justify-center">
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
               <a href="index.html" class="text-gray-800 hover:bg-violet-300 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</a>
@@ -43,7 +44,7 @@
       </div>
 
       <!-- Mobile menu, show/hide based on menu state. -->
-      <div class="sm:hidden" id="mobile-menu">
+      <div class="sm:hidden hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pb-3 pt-2">
           <a href="index.html" class="text-gray-300 hover:bg-violet-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Home</a>
           <a href="kylo.html" class="text-gray-300 hover:bg-violet-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Kylo</a>
@@ -53,77 +54,70 @@
           <a href="contact.html" class="bg-violet-400 text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">Contact</a>
         </div>
       </div>
-      <div class="flex flex-col h-screen justify-between bg-gradient-to-r from-white from-0% via-violet-300 via-50% to-white to-100%">
+      <div class="flex flex-col h-auto justify-between bg-gradient-to-r from-white from-0% via-violet-300 via-50% to-white to-100%">
         
-        <div class="bg-gray-200 px-5 w-2/3 m-auto rounded-md shadow-lg">
-        <main class="mb-auto">
-           <h2 class="text-gray-800 text-5xl p-10 flex justify-center">Contact</h2>
-            <p class="text-gray-800 text-lg p-10">Tell me about your pets...</p>
-
-        <form>
-            <div class="flex items-center flex-col text-lg">
-                <label for="text" class="block">Your Name</label>
-                <input type="text" placeholder="Your name..." class="rounded-md shadow-s w-15 p-1.5 m-5">
+        <div id="fade-in" class="bg-gray-100  px-2.5 md:px-5 w-full md:w-2/3 m-0 md:m-auto mt-10 md:mt-10 md:mb-10 rounded-md shadow-lg flex self-center justify-center">
+            <main class="mb-auto">
                 
-                
-                <p class="p-1.5">How many pets do you have?</p>
-                <div class="flex flex-row m-5">
-                <label m-2>
-                <input type="radio" name="number-of-pets" value="1" class="m-1.5" checked>1
-                
-                
-                
-                    <input type="radio" name="number-of-pets" value="2" class="m-1.5">2
-                    
-                    
-                        <input type="radio" name="number-of-pets" value="3" class="m-1.5">3
-                        
-                        
-                            <input type="radio" name="number-of-pets" value="4-or-more" class="m-1.5">4 or more
-                            </label>
-                            </div>
-
-                            
-                </div>
-                <div class="flex items-center flex-col text-lg">
-                   
-                <p class="p-1.5">What animals do you have?</p>
-                    <div class="flex flex-row m-5">
-                    <label m-2>
-                    <input type="checkbox" name="animal-type" value="cat" class="m-1.5">Cat
-                    
-                    
-                    <input type="checkbox" name="animal-type" value="dog" class="m-1.5">Dog
-                        
-                    <input type="checkbox" name="animal-type" value="rabbit" class="m-1.5">Rabbit
-                            
-                    <input type="checkbox" name="animal-type" value="guinea-pig" class="m-1.5">Guinea Pig
-                                
-                    <input type="checkbox" name="animal-type" value="other" class="m-1.5">Other
-                </label>
-                    </div>
-                    <input type="submit" value="Submit" class="p-1.5 bg-violet-400 rounded-md m-10 hover:bg-violet-300 hover:text-white hover:cursor-pointer">
-
-
+                <div class="flex-col">
+               <h2 class="text-gray-800 text-5xl p-10 text-center">Contact</h2>
+               
+        
+           <h2 class="rounded-md flex justify-center p-1.5 text-2xl text-white text-gray-700 bg-violet-300 rounded-md mb-5">Tell me about your furry companions!</h2>
+<form>
+           <div class="flex flex-col items-center">
+            <label for="text" class="p-2.5 bg-violet-300 rounded-md mb-2.5 mt-2.5 text-white">Your name</label>
+            <input type="text" placeholder="Type name here" class="p-1.5 rounded-md outline-violet-500 mt-2.5 mb-2.5 hover:scale-110" required>
+           </div>
+           <div class="flex flex-col items-center">
+            <label for="radio" class="p-2.5 bg-violet-300 rounded-md mb-2.5 mt-2.5 text-white">How many pets do you have?</label>
+            <div class="flex flex-row items-center">
+            <input type="radio" name="number-of-pets" value="1" class="m-2.5 hover:scale-110 hover:cursor-pointer">1
+            <input type="radio"  name="number-of-pets" value="2" class="m-2.5 hover:scale-110 hover:cursor-pointer">2
+            <input type="radio"  name="number-of-pets" value="3" class="m-2.5 hover:scale-110 hover:cursor-pointer">3
+            <input type="radio"  name="number-of-pets" value="4-or-more" class="m-2.5 hover:scale-110 hover:cursor-pointer">4 or more
+            </div>
+           </div>
+           <div class="flex flex-col items-center">
+            <label for="checkbox" class="p-2.5 bg-violet-300 rounded-md mb-2.5 mt-2.5 text-white">What animals do you have?</label>
+            <div class="flex flex-row items-center">
+            <input type="checkbox" name="animal-type" value="dog" class="m-2.50 hover:scale-110 hover:cursor-pointer ">Dog
+            <input type="checkbox"  name="animal-type" value="cat" class="m-2.5 hover:scale-110 hover:cursor-pointer">Cat
+            <input type="checkbox"  name="animal-type" value="rabbit" class="m-2.5 hover:scale-110 hover:cursor-pointer">Rabbit
+            <input type="checkbox"  name="animal-type" value="guinea-pig" class="m-2.5 hover:scale-110 hover:cursor-pointer">Guinea Pig
+            <input type="checkbox"  name="animal-type" value="reptile" class="m-2.5 hover:scale-110 hover:cursor-pointer">Reptile
+            <input type="checkbox"  name="animal-type" value="other" class="m-2.5 hover:scale-110 hover:cursor-pointer">Other
+            </div>
+           </div>
+           <div class="flex flex-col items-center">
+            <label for="textarea" class="p-2.5 bg-violet-300 rounded-md mb-2.5 mt-2.5 text-white">Leave a message about your pets</label>
+            <textarea placeholder="E.g. your animals favourite food, nicknames..." class="p-2.5 w-full h-auto m-2.5 hover:scale-110 outline-violet-500"></textarea>
+           </div>
+           <div class="flex justify-center m-5">
+            <button type="submit" value="Submit"class="pt-2.5 pb-2.5 pr-5 pl-5 bg-violet-400 rounded-md mb-20 text-white hover:bg-violet-600 hover:scale-110">Submit</button>
+           </div>
+</form>
     
-                                
-                    </div>
-                </form>
-             </main>
         </div>
-        
-    </div>
-    <footer class="bg-violet-100"> 
+        </div>
+        </main>
+
+      
+      <footer class="bg-violet-100"> 
         <p class="p-1 text-l text-gray-600 p-5">&copy; Sophie Woodcock, 2023</p>
 
     </footer>
-    
-    <script>
-        function toggleMobileMenu() {
-          var mobileMenu = document.getElementById('mobile-menu');
-          mobileMenu.classList.toggle('hidden');
-        }
-      </script>
-    </body>
-    </html>
+        
+
+        <script>
+            function toggleMobileMenu() {
+              var mobileMenu = document.getElementById('mobile-menu');
+              mobileMenu.classList.toggle('hidden');
+            }
+            $('#fade-in').hide().fadeIn('slow');
+          </script>
+
+      </body>
+      </html>
+      
     
